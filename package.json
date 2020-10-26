@@ -1,0 +1,46 @@
+{
+	"name": "zl-sass",
+	"version": "1.0.1",
+	"description": "Sass公共样式库",
+	"main": "gulpfile.js",
+	"scripts": {
+		"build": "gulp build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bailitutu/zl-sass.git"
+	},
+	"keywords": [],
+	"author": "tzl",
+	"license": "ISC",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-load-plugins": "^2.0.5",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.1.0",
+		"husky": "^4.3.0",
+		"lint-staged": "^10.4.0",
+		"node-sass": "^4.14.1",
+		"stylelint": "^13.7.2",
+		"stylelint-config-standard": "^20.0.0"
+	},
+	"browserslist": [
+		"defaults",
+		"not ie < 9",
+		"last 2 versions",
+		"> 1%"
+	],
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.scss": [
+			"stylelint --fix --syntax scss",
+			"git add"
+		]
+	}
+}
