@@ -1,6 +1,6 @@
 {
 	"name": "zl-sass",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Sass公共样式库",
 	"main": "gulpfile.js",
 	"scripts": {
